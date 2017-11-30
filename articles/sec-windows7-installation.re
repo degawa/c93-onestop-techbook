@@ -1,27 +1,27 @@
 #@# -*- coding: utf-8 -*-
 
-={ReviewWin7} Re:Viewのインストール（Windows7編）
+={ReviewWin7} Re:VIEWのインストール（Windows7編）
 
-Re:Viewのインストール方法などを調べると、Dockerを使うのが簡単だと書いてあったりします。
+Re:VIEWのインストール方法などを調べると、Dockerを使うのが簡単だと書いてあったりします。
 Techboosterさんの書籍やQiitaを調べても、それ以外の方法はあまり出てきません。
 かろうじてCygwinを使う方法が出てくるぐらいでしょうか。
 WindowsだとそもそもDockerを使えるようにすること自体が大変です。
 Cygwinのインストールにも非常に長い時間がかかります。
 Windows 10であれば、Linux Subsystem on Windowsを使う方法もありますが、Windows 7ユーザーは
-これらの情報からRe:View環境を構築すること自体が大変です。
+これらの情報からRe:VIEW環境を構築すること自体が大変です。
 
-この章では、Windows 7ユーザーに向けて、比較的簡単なRe:Viewのインストール方法を紹介します。
+この章では、Windows 7ユーザーに向けて、比較的簡単なRe:VIEWのインストール方法を紹介します。
 Windowsユーザーは、PCにプログラムをインストールする時、インストーラーをインターネットからダウンロードして、
 それらを実行してインストーラーの指示に沿って作業していくことに慣れていると思います。
 この章で紹介する方法は、たった二つのインストーラーをダウンロードして、Windowsユーザーが慣れたやり方でインストールしていきます。
 
-さて、すでに説明があったように、Re:ViewはRubyと呼ばれるブログラムを介して原稿を処理します。
+さて、すでに説明があったように、Re:VIEWはRubyと呼ばれるブログラムを介して原稿を処理します。
 そして、PDFを出力する際にTeXと呼ばれる組版ソフトを使っています。
-つまり、TeXとRubyとRe:Viewをインストールする必要があるわけです。
+つまり、TeXとRubyとRe:VIEWをインストールする必要があるわけです。
 
 この章では、最初にTeXをインストールして、次にRubyをインストールします。
-最後に、Rubyを使ってRe:Viewをインストールします。
-TeXとRubyのどちらを先にインストールしても問題ありませんが、Re:ViewのインストールにはRubyが必要です。
+最後に、Rubyを使ってRe:VIEWをインストールします。
+TeXとRubyのどちらを先にインストールしても問題ありませんが、Re:VIEWのインストールにはRubyが必要です。
 
 =={ReviewWin7-Tex} TeXのインストール
 TeXと呼ばれるソフトウェアには、実は色々なバリエーションがあります。
@@ -71,7 +71,7 @@ Windows 7のユーザー設定によっては、Cドライブ直下にフォル�
 これらのURLを別のURLに変更してみてください。
 dvioutはTeXを直接編集するときにしか使いません。
 GhostscriptやGSviewは図を埋め込むためにTeXから使われるだけなので、
-Re:Viewで原稿を書くのであれば、これらのソフトを立ち上げることはありません。
+Re:VIEWで原稿を書くのであれば、これらのソフトを立ち上げることはありません。
 //image[ReviewWin7_texinst_3_url][dviout, Ghostscript, GSviewのダウンロードURLの設定][scale=0.5]{
 //}
 
@@ -225,29 +225,29 @@ ruby 2.4.2p198 (2017-09-14 revision 59899) [x64-mingw32]
 実際の画面はこんな感じです。ただし、作業フォルダをD:\Workspaceに移動しました。
 //image[ReviewWin7_rubyinst_7_confirm][Rubyのバージョンの確認][scale=0.9]{
 //}
-このままの勢いでRe:Viewもインストールしてしまいましょう。
+このままの勢いでRe:VIEWもインストールしてしまいましょう。
 
-=={ReviewWin7-ReView} Re:Viewのインストール
-Re:Viewは、Rubyを使ってコマンドからインストールします。
+=={ReviewWin7-ReView} Re:VIEWのインストール
+Re:VIEWは、Rubyを使ってコマンドからインストールします。
 Start Command Prompt with Rubyを開いた状態で次のコマンドを実行します。
 //cmd{
 > gem install review
 //}
-図のような画面が表示されて、Re:Viewがインストールされます。
+図のような画面が表示されて、Re:VIEWがインストールされます。
 これだけでインストールは終わりです。
 簡単だったでしょ？
-//image[ReviewWin7_reviewinst][Re:Viewのインストール][scale=0.9]{
+//image[ReviewWin7_reviewinst][Re:VIEWのインストール][scale=0.9]{
 //}
 
-Re:Viewの動作確認をしながら、pdfを出力するための手順を説明します。
-Re:Viewの原稿を作成するためには、@<tt>{review-init}を実行します。
+Re:VIEWの動作確認をしながら、pdfを出力するための手順を説明します。
+Re:VIEWの原稿を作成するためには、@<tt>{review-init}を実行します。
 //cmd{
 > review-init reviewSample
 //}
 ここでは、reviewSampleという名前の原稿を作成しています。
 実行して何も表示されなければ、reviewSampleというフォルダが作られ、
 その中に原稿のサンプルが存在します。
-//image[ReviewWin7_pdfmake_1_init][Re:Viewによって作られた原稿のひな型][scale=0.6]{
+//image[ReviewWin7_pdfmake_1_init][Re:VIEWによって作られた原稿のひな型][scale=0.6]{
 //}
 
 この原稿からpdfを作りましょう。
@@ -274,7 +274,7 @@ reviewSampleというフォルダを開き、
 //image[ReviewWin7_pdfmake_3_error][pdf作成時のエラーメッセージ][scale=0.9]{
 //}
 
-これは、Re:Viewの原稿がTeX形式に変換されてdviファイルが作られ、それがpdfに変換されるという一連の作業の中で、
+これは、Re:VIEWの原稿がTeX形式に変換されてdviファイルが作られ、それがpdfに変換されるという一連の作業の中で、
 dviファイルからpdfファイルに変換する途中で問題が発生しています。
 ヒラギノフォントを使おうとして、ヒラギノフォントが存在しないので
 エラーが発生しているという状況です。
@@ -329,27 +329,27 @@ dvioptions: "-f msmingoth.map -d 5"
 //}
 warningはでますが順調に変換が進んでいきます。
 reviewSampleのフォルダにbook.pdfが作られていることが確認できました。
-これで無事にWindows 7でRe:Viewを使い、PDFファイルを作成できるようになりました。
+これで無事にWindows 7でRe:VIEWを使い、PDFファイルを作成できるようになりました。
 //image[ReviewWin7_pdfmake_4_result][作成されたpdfファイル][scale=0.5]{
 //}
 
-まとめると、Windows 7でRe:View環境を構築する手順は次のとおりです。
+まとめると、Windows 7でRe:VIEW環境を構築する手順は次のとおりです。
 
  1. TeXをインストール
  2. Rubyをインストール
- 3. RubyからRe:Viewをインストール
+ 3. RubyからRe:VIEWをインストール
  4. @<tt>{config.yml}の@<tt>{dvioptions}に@<tt>{-f msmingoth.map}を追加
 
 なお、各ソフトのインストールは一度だけでよいのですが、@<ttb>{config.yml}@<b>{にオプションを追記するのは原稿毎に行う必要があることに注意してください。}
 
-== Visual Studio CodeのRe:View用拡張機能と編集作業
-Re:Viewが使えるようになったので、次は快適な執筆環境を整えましょう。
+== Visual Studio CodeのRe:VIEW用拡張機能と編集作業
+Re:VIEWが使えるようになったので、次は快適な執筆環境を整えましょう。
 執筆に使うエディタには、Microsoft社が公開しているVisual Studio Code（以降、VSCode）がよいと思います。
 多機能なわりに動作が軽く、しかも無料です。
-Re:View用の拡張機能をインストールすると、Re:Viewの命令をハイライトしてくれたり、VSCode内ででき上がりを見れたりします。
-ここでは、VSCodeにRe:View用の拡張機能を導入する方法と、VSCode内からpdfを作る方法を説明します。
+Re:VIEW用の拡張機能をインストールすると、Re:VIEWの命令をハイライトしてくれたり、VSCode内ででき上がりを見れたりします。
+ここでは、VSCodeにRe:VIEW用の拡張機能を導入する方法と、VSCode内からpdfを作る方法を説明します。
 
-==={ReviewWin7-VSCodeExt} Re:View用拡張機能のインストール
+==={ReviewWin7-VSCodeExt} Re:VIEW用拡張機能のインストール
 拡張機能のインストールは、VSCodeの拡張機能のメニューから行います。
 VSCodeのウィンドウ左側を、縦に並んでいるアイコンのうち、四角に切れ込みが入ったような図柄のアイコンが拡張機能です。
 （どのようなアイコン化は図を参照してください）
@@ -358,15 +358,15 @@ VSCodeのウィンドウ左側を、縦に並んでいるアイコンのうち�
 検索用のテキストボックスに「review」と入力すると、いくつか候補が表示されます。
 そのうちatsushieoさんのRe:VIEW（Re:VIEW language support for Visual Studio Code）をインストールします。
 インストールは簡単で、緑色で塗りつぶされているインストールボタンをクリックするだけです。
-//image[ReviewWin7_vscode_1_extension][Visual Studio CodeへのRe:View用拡張機能の追加][scale=0.5]{
+//image[ReviewWin7_vscode_1_extension][Visual Studio CodeへのRe:VIEW用拡張機能の追加][scale=0.5]{
 //}
 
 ==={ReviewWin7-VSCodeEdit} VSCodeによる編集作業
-Re:View用の拡張機能をインストールできたら、具体的な編集作業の流れを見ていきましょう。
+Re:VIEW用の拡張機能をインストールできたら、具体的な編集作業の流れを見ていきましょう。
 編集するファイル（config.ymlやcatalog.yml, *.re等）を一つずつVSCodeに読み込ませてもよいのですが、
 原稿はフォルダにまとまって置かれているので、フォルダをまるごとVSCodeで開き、VSCodeから編集するファイルを拓くことにします。
 この方が開くファイルを間違えたりしないので便利です。
-ここでは、先ほどRe:Viewの動作確認に使ったreviewSampleを使い、
+ここでは、先ほどRe:VIEWの動作確認に使ったreviewSampleを使い、
 編集作業からpdfの出力までを説明します。
 
 ファイル→フォルダーを開くクリックし、開きたいフォルダ（reviewSample）を選択します。
@@ -386,7 +386,7 @@ reviewSample.reをクリックして開き、編集をします。
 //}
 そして、ここからがVSCodeの便利なところで、
 ウィンドウ右上にあるShow previewをクリックするとウィンドウが分割され、右に仕上がりが表示されるのです。
-もしRe:Viewの命令に何か間違いがあると、仕上がりが表示されなくなり、
+もしRe:VIEWの命令に何か間違いがあると、仕上がりが表示されなくなり、
 原稿の間違っている箇所を赤の下線で指摘してくれます。
 //image[ReviewWin7_vscode_6_preview][ファイルのプレビュー][scale=0.9]{
 //}
@@ -410,7 +410,7 @@ reviewSample.reをクリックして開き、編集をします。
 //cmd{
 > review-pdfmaker config.yml
 //}
-//image[ReviewWin7_vscode_10_pdfmaker][Re:Viewによるpdfファイルの作成][scale=0.7]{
+//image[ReviewWin7_vscode_10_pdfmaker][Re:VIEWによるpdfファイルの作成][scale=0.7]{
 //}
 
 エラーが発生しなければbook.pdfが作られます。
@@ -420,30 +420,31 @@ reviewSample.reをクリックして開き、編集をします。
 //}
 
 この章の著者の環境では、AdobeのAcrobatが起動し、book.pdfが表示されます。
-pdfファイルを表示したままにしておくと、次にRe:Viewでpdfファイルを作成するときに
+pdfファイルを表示したままにしておくと、次にRe:VIEWでpdfファイルを作成するときに
 pdfファイルを上書きできなくなるので、編集作業に戻る、あるいはpdfファイルを作成するタイミングで開かれているpdfファイルを閉じるようにしましょう。
 残念ながら、VSCodeでpdfファイルを開こうとすると、サポートされていないというメッセージが表示されます。
 
 =={ReviewWin7_summary} この章のまとめ
-この章では、Windows 7でRe:View環境を構築して、Visual Studio Codeで編集してpdfを出力するところまで説明しました。
+この章では、Windows 7でRe:VIEW環境を構築して、Visual Studio Codeで編集してpdfを出力するところまで説明しました。
 事前に情報を集めてめんどくさいなぁと思っていた方は、意外に簡単で拍子抜けしたのではないかと思います。
 締切（とストレージ）の都合上、TeX Liveを試せなかったのは残念ですが、問題なく使えるのではないかと予想しています。
 もし、本書をお読みになった方で知見をお持ちの方は、ぜひ本書の改訂版を一緒に作りましょう！
 
-Windows 7にRe:View環境を構築する方法が（実は）たくさんあり、この手順を見つけるまでには紆余曲折がありました@<fn>{WIN10ENV}。
+===[column] Windows 7にRe:VIEW環境を構築する
+Windows 7にRe:VIEW環境を構築する方法が（実は）たくさんあり、この手順を見つけるまでには紆余曲折がありました@<fn>{WIN10ENV}。
 //footnote[WIN10ENV][Windows 10の場合は、Linux Subsystem on Windowsが利用できるので、Dockerを簡単に利用できます。]
 
  1. インターネット上の説明に沿ってDocker for Windowsを使う方法は、仮想化環境を動かすためのVirtualBoxがVMWareと相性が悪いので使えませんでした。
- 2. VMWareにLinuxをインストールしてそこにRe:View環境を構築する方法は簡単に成功しましたが、執筆作業がWindowsとLinuxにまたがってしまうのでやり取りが億劫でした。また、仮想OSのために30GBほど消費しますし、ノートPCではバッテリーの消費が多くなり、出先で執筆ができません。
- 3. CygwinにRe:Viewをインストールする方法では、Cygwin自体がかなり容量を消費しますし、ファイルパスの設定が非常にややこしいことになります。
+ 2. VMWareにLinuxをインストールしてそこにRe:VIEW環境を構築する方法は簡単に成功しましたが、執筆作業がWindowsとLinuxにまたがってしまうのでやり取りが億劫でした。また、仮想OSのために30GBほど消費しますし、ノートPCではバッテリーの消費が多くなり、出先で執筆ができません。
+ 3. CygwinにRe:VIEWをインストールする方法では、Cygwin自体がかなり容量を消費しますし、ファイルパスの設定が非常にややこしいことになります。
  4. Windows版のTeXとRubyをインストールしてターミナルから使う方法は一切情報がありませんでしたが、やってみるとうまくいきました。
  
 Windows版のTeXとRubyを使う方法は、最初は誰もやっていないので何か根本的な問題があるのかと考えていましたが、
-Ruby for Windowsをインストールして、gemでRe:Viewがインストールできた段階で現実味を帯びてきました。
+Ruby for Windowsをインストールして、gemでRe:VIEWがインストールできた段階で現実味を帯びてきました。
 途中、ヒラギノフォントを読みにいくエラーを回避できなくて詰まりましたが、dvioptionsを見つけてエラーを回避できました。
 やってみるものですね。
 
-この章の著者はこういう試行錯誤を楽しむことができますが、技術書を書くためにRe:Viewを使おうとする人全員にそのような試行錯誤を要求するのは酷というものでしょう。
+この章の著者はこういう試行錯誤を楽しむことができますが、技術書を書くためにRe:VIEWを使おうとする人全員にそのような試行錯誤を要求するのは酷というものでしょう。
 そのために本書があるわけですから、本書を読んだ方（この章では特にWindows 7ユーザー）が環境構築に詰まることなく、
 技術書執筆に集中できるようになれば、それに勝る喜びはありません。
 
