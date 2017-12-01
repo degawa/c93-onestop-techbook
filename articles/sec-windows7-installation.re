@@ -7,7 +7,7 @@ Techboosterさんの書籍やQiitaを調べても、それ以外の方法はあ�
 かろうじてCygwinを使う方法が出てくるぐらいでしょうか。
 WindowsだとそもそもDockerを使えるようにすること自体が大変です。
 Cygwinのインストールにも非常に長い時間がかかります。
-Windows 10であれば、Linux Subsystem on Windowsを使う方法もありますが、Windows 7ユーザーは
+Windows 10であれば、Windows Subsystem for Linuxを使う方法もありますが、Windows 7ユーザーは
 これらの情報からRe:VIEW環境を構築すること自体が大変です。
 
 この章では、Windows 7ユーザーに向けて、比較的簡単なRe:VIEWのインストール方法を紹介します。
